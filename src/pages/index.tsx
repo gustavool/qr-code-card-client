@@ -1,5 +1,8 @@
+import Button from "@/components/Button";
 import InputText from "@/components/InputText";
+import QRCodeLink from "@/components/QRCodeLink";
 import { useState } from "react";
+import QRCode from "react-qr-code";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -9,18 +12,34 @@ export default function Home() {
   function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
+
+  function handleLinkedinChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setLinkedin(e.target.value);
+  }
+
+  function handleGithubChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setGithub(e.target.value);
+  }
   return (
-    <>
-      <h1 className="text-3xl  underline border-l-red-50 bg-red-700">
-        Hello world!
-      </h1>
+    <div className="flex flex-col w-3/6 mx-auto gap-3">
       <InputText
-        label="name"
+        label="Name"
         placeholder="your name"
         onChange={handleNameChange}
       />
-      <InputText label="name" placeholder="your name" />
-      <InputText label="name" placeholder="your name" />
-    </>
+      <InputText
+        label="Linkedin URL"
+        placeholder="linkedin url"
+        onChange={handleLinkedinChange}
+      />
+      <InputText
+        label="Github URL"
+        placeholder="github url"
+        onChange={handleGithubChange}
+      />
+      <Button>Generate Image</Button>
+
+      <QRCodeLink link="https://www.google.com.br" />
+    </div>
   );
 }
