@@ -5,6 +5,8 @@ interface InputTextProps extends React.InputHTMLAttributes<HTMLInputElement> {
 export default function InputText({
   label,
   placeholder,
+  onChange,
+  name,
   type = "text",
 }: InputTextProps) {
   return (
@@ -19,9 +21,11 @@ export default function InputText({
       )}
       <input
         type={type}
+        name={name}
         placeholder={placeholder}
         id={label}
         className="px-4 py-1 h-full w-full border-solid border-2 border-gray-300 rounded-r"
+        onChange={onChange}
       />
     </div>
   );

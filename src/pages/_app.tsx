@@ -1,20 +1,11 @@
-import "../../global.css";
 import type { AppProps } from "next/app";
-import DataContext from "@/context/DataContext";
-import { useState } from "react";
-import { IUserData } from "./generate";
+import "../../global.css";
+import UserDataProvider from "@/context/UserDataContext";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [data, setData] = useState<IUserData>({
-    name: "",
-    about: "",
-    linkedin: "",
-    github: "",
-  });
-
   return (
-    <DataContext.Provider value={{ data, setData }}>
+    <UserDataProvider>
       <Component {...pageProps} />
-    </DataContext.Provider>
+    </UserDataProvider>
   );
 }

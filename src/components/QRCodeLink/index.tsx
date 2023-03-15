@@ -10,7 +10,7 @@ export default function QRCodeLink({ link }: QRCodeLink) {
       style={{
         height: "auto",
         margin: "0 auto",
-        maxWidth: 64,
+        maxWidth: 128,
         width: "100%",
       }}
     >
