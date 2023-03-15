@@ -1,7 +1,6 @@
 import Button from "@/components/Button";
-import InputText from "@/components/InputText";
 import QRCodeLink from "@/components/QRCodeLink";
-import { IUserData, UserDataContext } from "@/context/UserDataContext";
+import { UserDataContext } from "@/context/UserDataContext";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 export default function QRCode() {
