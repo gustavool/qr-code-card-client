@@ -44,7 +44,7 @@ export default function CardBusiness() {
             <TitleH1>Information</TitleH1>
             <S.Info>
               <p>
-                Hello, my name is: <strong>{cardData.name}.</strong>
+                Hello, my name is: <strong>{cardData.name}</strong>.
               </p>
               <p>
                 About me: <strong>{cardData?.about}</strong>

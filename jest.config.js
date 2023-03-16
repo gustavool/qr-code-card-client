@@ -8,8 +8,8 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   testPathIgnorePatterns: ["/node_modules/", "/.next/"],
-  // collectCoverage: true,
-  // collectCoverageFrom: ["src/**/*.ts(x)?", "!src/**/stories.tsx"],
+  collectCoverage: true,
+  collectCoverageFrom: ["src/**/*.ts(x)?", "!src/**/stories.tsx"],
   setupFilesAfterEnv: ["<rootDir>/.jest/setup.ts"],
   moduleDirectories: ["<rootDir>/node_modules", "<rootDir>/src"],
   moduleNameMapper: {

@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import { BiArrowBack } from "react-icons/bi";
 import TitleH1 from "../TitleH1";
 import LinkQRCode from "qrcode";
-import * as S from "./styles";
 import QRCodeBox from "../QRCodeBox";
+import * as S from "./styles";
 
 export default function QRCodeData() {
   const [linkQRCode, setLinkQRCode] = useState("");
@@ -46,26 +46,22 @@ export default function QRCodeData() {
   }, [user.id]);
 
   return (
-    <>
-      {!!user.name && (
-        <S.Wrapper>
-          <S.BackButton onClick={() => handleToBack()}>
-            <BiArrowBack size={24} /> <span>back</span>
-          </S.BackButton>
-          <S.Container>
-            <TitleH1>{user.name}</TitleH1>
-            <h2>Scan ME</h2>
-            <QRCodeBox link={urlCard} />
-            {!!linkQRCode && (
-              <Button>
-                <a href={linkQRCode} download={`qrcode-${user.name}.png`}>
-                  Download QRCODE image
-                </a>
-              </Button>
-            )}
-          </S.Container>
-        </S.Wrapper>
-      )}
-    </>
+    <S.Wrapper>
+      <S.BackButton onClick={() => handleToBack()}>
+        <BiArrowBack size={24} /> <span>back</span>
+      </S.BackButton>
+      <S.Container>
+        <TitleH1>{user.name}</TitleH1>
+        <h2>Scan ME</h2>
+        <QRCodeBox link={urlCard} />
+        {!!linkQRCode && (
+          <Button>
+            <a href={linkQRCode} download={`qrcode-${user.name}.png`}>
+              Download QRCODE image
+            </a>
+          </Button>
+        )}
+      </S.Container>
+    </S.Wrapper>
   );
 }
