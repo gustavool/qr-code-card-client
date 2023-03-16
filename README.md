@@ -17,13 +17,6 @@ image: [Storyset](https://storyset.com/illustration/hello/pana)
 - react-testing-library
 - styled-components
 
-## Images
-
-<p align='center'><img  src="readme/app-home.jpg"></p>
-<p align='center'><img  src="readme/app-form.jpg"></p>
-<p align='center'><img  src="readme/app-qrcode.jpg"></p>
-<p align='center'><img  src="readme/app-card.jpg"></p>
-
 ## Getting started
 
 #### QR Code card api
@@ -42,3 +35,10 @@ inside the main folder execute: `npm install`
 #### Run project
 
 `npm run dev`
+
+## Images
+
+<p align='center'><img  src="readme/app-home.jpg"></p>
+<p align='center'><img  src="readme/app-form.jpg"></p>
+<p align='center'><img  src="readme/app-qrcode.jpg"></p>
+<p align='center'><img  src="readme/app-card.jpg"></p>
