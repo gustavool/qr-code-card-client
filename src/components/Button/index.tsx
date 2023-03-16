@@ -1,9 +1,11 @@
-interface ButtonProps extends React.InputHTMLAttributes<HTMLButtonElement> {}
+import * as S from "./styles";
 
-export default function Button({ children, onClick }: ButtonProps) {
-  return (
-    <button className="bg-gray-300 px-4 py-1 rounded w-4/6" onClick={onClick}>
-      {children}
-    </button>
-  );
-}
+export type ButtonProps = {
+  children: React.ReactNode;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Button = ({ children, ...props }: ButtonProps) => (
+  <S.Wrapper {...props}>{children}</S.Wrapper>
+);
+
+export default Button;

@@ -1,10 +1,10 @@
 import QRCode from "react-qr-code";
 
-interface QRCodeLink {
+interface QRCodeBoxProps {
   link: string;
 }
 
-export default function QRCodeLink({ link }: QRCodeLink) {
+export default function QRCodeBox({ link }: QRCodeBoxProps) {
   return (
     <div
       style={{
