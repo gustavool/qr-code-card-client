@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import findUserById from "@/services/findUserById";
 import { UserModel } from "@/model/User";
 import TitleH1 from "@/components/TitleH1";
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import * as S from "./styles";
 
 export default function CardBusiness() {

@@ -10,7 +10,7 @@ export default function QRCodeBox({ link }: QRCodeBoxProps) {
       style={{
         height: "auto",
         margin: "0 auto",
-        maxWidth: 128,
+        maxWidth: 200,
         width: "100%",
       }}
     >
