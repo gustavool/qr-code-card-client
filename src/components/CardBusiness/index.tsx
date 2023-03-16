@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import findUserById from "@/services/findUserById";
 import { UserModel } from "@/model/User";
 import TitleH1 from "@/components/TitleH1";
+import { TbBrandGithub } from "react-icons/tb";
+import { AiOutlineLinkedin } from "react-icons/ai";
 import * as S from "./styles";
 
 export default function CardBusiness() {
@@ -40,7 +41,7 @@ export default function CardBusiness() {
       {!!cardData.name && (
         <S.Wrapper>
           <S.Content>
-            <TitleH1>Informations</TitleH1>
+            <TitleH1>Information</TitleH1>
             <S.Info>
               <p>
                 Hello, my name is: <strong>{cardData.name}.</strong>
@@ -59,14 +60,14 @@ export default function CardBusiness() {
                 href={cardData?.github}
                 target="_blank"
               >
-                <GithubLogo size={24} /> <span>Github</span>
+                <TbBrandGithub size={24} /> <span>Github</span>
               </S.ButtonLink>
               <S.ButtonLink
                 type="linkedin"
                 href={cardData?.linkedin}
                 target="_blank"
               >
-                <LinkedinLogo size={24} /> <span>Linkedin</span>
+                <AiOutlineLinkedin size={24} /> <span>Linkedin</span>
               </S.ButtonLink>
             </S.ButtonGroup>
           </S.Content>

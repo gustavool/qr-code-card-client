@@ -1,6 +1,7 @@
 import { UserModel } from "@/model/User";
 import deleteUserById from "@/services/deleteUserById";
-import { IdentificationCard, Trash } from "@phosphor-icons/react";
+import { AiOutlineIdcard } from "react-icons/ai";
+import { TfiTrash } from "react-icons/tfi";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import * as S from "./styles";
 
@@ -29,9 +30,12 @@ const CardList = ({ list, setList }: CardListProps) => {
           list.map((user) => (
             <S.List key={user.id}>
               <S.ListItem href={`${origin}/card/${user.id}`} target="_blank">
-                <IdentificationCard size={32} /> <span>{user.name}</span>
+                <AiOutlineIdcard size={32} /> <span>{user.name}</span>
               </S.ListItem>
-              <Trash size={28} onClick={() => handleDeleteCardUser(user.id)} />
+              <TfiTrash
+                size={28}
+                onClick={() => handleDeleteCardUser(user.id)}
+              />
             </S.List>
           ))}
       </S.Content>

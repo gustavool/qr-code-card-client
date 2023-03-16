@@ -13,7 +13,7 @@ describe("<CardBusiness />", () => {
   it("should render default button", () => {
     render(
       <ThemeProvider theme={defaultTheme}>
-        {/* <CardBusiness /> */}
+        <CardBusiness />
       </ThemeProvider>
     );
   });

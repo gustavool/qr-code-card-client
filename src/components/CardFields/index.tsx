@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import { UserDataContext } from "@/context/UserDataContext";
 import saveUser from "@/services/saveUser";
-import { ArrowLeft } from "@phosphor-icons/react";
+import { BiArrowBack } from "react-icons/bi";
 import * as S from "./styles";
 
 export type CardDataType = {
@@ -54,7 +54,7 @@ export default function CardFields() {
   return (
     <S.Wrapper>
       <S.BackButton onClick={() => handleToBack()}>
-        <ArrowLeft size={32} /> <span>back</span>
+        <BiArrowBack size={24} /> <span>back</span>
       </S.BackButton>
       <InputText
         label="Name"

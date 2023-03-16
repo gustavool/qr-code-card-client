@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Button from "@/components/Button";
 import { UserDataContext } from "@/context/UserDataContext";
 import { useRouter } from "next/router";
-import { ArrowLeft } from "@phosphor-icons/react";
+import { BiArrowBack } from "react-icons/bi";
 import TitleH1 from "../TitleH1";
 import LinkQRCode from "qrcode";
 import * as S from "./styles";
@@ -50,7 +50,7 @@ export default function QRCodeData() {
       {!!user.name && (
         <S.Wrapper>
           <S.BackButton onClick={() => handleToBack()}>
-            <ArrowLeft size={32} /> <span>back</span>
+            <BiArrowBack size={24} /> <span>back</span>
           </S.BackButton>
           <S.Container>
             <TitleH1>{user.name}</TitleH1>
