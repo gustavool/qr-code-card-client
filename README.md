@@ -34,7 +34,7 @@ inside the main folder execute: `npm install`
 
 #### Run project
 
-`npm run dev`
+rename `.env.example` to `.env` and run `npm run dev`
 
 ## Images
 
